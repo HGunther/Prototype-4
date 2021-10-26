@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class NodeManager : MonoBehaviour
 {
-
-    public NodeManager nodeManager;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +16,9 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void NewDay(){
-        Debug.Log("Starting new day");        
-        nodeManager.OnNewDay();
+    public void OnNewDay(){
+        foreach(Transform child in transform){
+            child.GetComponent<Node>().OnNewDay();
+        }
     }
 }

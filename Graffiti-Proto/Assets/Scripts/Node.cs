@@ -27,7 +27,7 @@ public class Node : MonoBehaviour
         print("Touched");
     }
 
-    void OnNewDay()
+    public void OnNewDay()
     {
         if (exposed){
             days_since_exposure += 1;

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
+    [SerializeField] public List<Edge> edges;
+
     public bool exposed = false;
     public int days_since_exposure = 0;
     public bool is_contagous = false;
@@ -56,6 +58,14 @@ public class Node : MonoBehaviour
         {
             would_test_positive = true;
         }
+        if (days_since_exposure >= Constants.days_until_not_contagous)
+        {
+            is_contagous = false;
+        }
+        if (days_since_exposure >= Constants.days_until_would_not_test_positive)
+        {
+            would_test_positive = false;
+        }
 
         if (days_since_exposure >= Constants.days_until_can_get_again)
         {
@@ -67,6 +77,7 @@ public class Node : MonoBehaviour
             would_test_positive = false;
         }
     }
+
     void UpdateRender()
     {
         if (is_symptomatic)

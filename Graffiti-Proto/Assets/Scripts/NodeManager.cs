@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NodeManager : MonoBehaviour
 {
+    [SerializeField] public List<Node> nodes;
+
     // Start is called before the first frame update
     void Start()
     {

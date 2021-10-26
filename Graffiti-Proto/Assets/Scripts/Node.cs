@@ -13,13 +13,18 @@ public class Node : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    void OnEnable()
+    {
+        UpdateRender();
     }
 
     private void OnMouseDown()
@@ -29,28 +34,48 @@ public class Node : MonoBehaviour
 
     public void OnNewDay()
     {
-        if (exposed){
+        if (exposed)
+        {
             days_since_exposure += 1;
         }
-        if (days_since_exposure >= Constants.days_until_contagous){
+        UpdateData();
+    }
+
+    void UpdateData()
+    {
+        if (days_since_exposure >= Constants.days_until_contagous)
+        {
             is_contagous = true;
         }
-        if (days_since_exposure >= Constants.days_until_symptomatic){
+        if (days_since_exposure >= Constants.days_until_symptomatic)
+        {
             is_symptomatic = true;
-            GetComponent<SpriteRenderer>().color = Colors.symptomatic;
+            UpdateRender();
         }
-        if (days_since_exposure >= Constants.days_until_would_test_positive){
+        if (days_since_exposure >= Constants.days_until_would_test_positive)
+        {
             would_test_positive = true;
         }
 
-        if (days_since_exposure >= Constants.days_until_can_get_again){
+        if (days_since_exposure >= Constants.days_until_can_get_again)
+        {
             exposed = false;
             days_since_exposure = 0;
             is_contagous = false;
             is_symptomatic = false;
-            GetComponent<SpriteRenderer>().color = Colors.asymptomatic;
+            UpdateRender();
             would_test_positive = false;
         }
-
+    }
+    void UpdateRender()
+    {
+        if (is_symptomatic)
+        {
+            GetComponent<SpriteRenderer>().color = Colors.symptomatic;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().color = Colors.asymptomatic;
+        }
     }
 }

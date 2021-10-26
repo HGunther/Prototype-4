@@ -1056,7 +1056,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298785, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: days_since_exposure
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298785, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}

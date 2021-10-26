@@ -17,7 +17,7 @@ public class NodeSeperator : MonoBehaviour
     }
     void Update()
     {
-        print(connectionsToDelete.Count);
+        //print(connectionsToDelete.Count);
         if(Input.GetMouseButtonDown(0))
         {
             StartCutting();

@@ -1170,7 +1170,7 @@ GameObject:
   - component: {fileID: 486331529}
   - component: {fileID: 486331528}
   m_Layer: 0
-  m_Name: Line4
+  m_Name: Node2-Node3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1474,7 +1474,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 6281932628166298799, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2551,7 +2552,7 @@ GameObject:
   - component: {fileID: 804418468}
   - component: {fileID: 804418467}
   m_Layer: 0
-  m_Name: Line
+  m_Name: Node1-Node3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4261,7 +4262,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 6281932628166298799, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5156,7 +5158,7 @@ GameObject:
   - component: {fileID: 1706890896}
   - component: {fileID: 1706890895}
   m_Layer: 0
-  m_Name: Line2
+  m_Name: Node1-Node2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5870,7 +5872,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 6281932628166298799, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5961,7 +5964,7 @@ GameObject:
   - component: {fileID: 1962478564}
   - component: {fileID: 1962478563}
   m_Layer: 0
-  m_Name: Line3
+  m_Name: Node2-Node4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6509,7 +6512,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 6281932628166298799, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_LocalPosition.x

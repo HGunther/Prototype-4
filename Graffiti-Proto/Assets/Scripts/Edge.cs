@@ -22,7 +22,7 @@ public class Edge : MonoBehaviour
 
         // Rotate to correct angle
         Vector3 dif = nodes[1].transform.position - nodes[0].transform.position;
-        float angle_degrees = Vector3.Angle(dif, Vector3.right);
+        float angle_degrees = Vector3.Angle(dif, Vector3.left);
         transform.Rotate(new Vector3(0, 0, angle_degrees));
 
         // Scale to match distance

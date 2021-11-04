@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class NodeManager : MonoBehaviour
 {
+    [SerializeField] public List<Node> nodes;
+    [SerializeField] public List<Edge> edges;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +21,15 @@ public class NodeManager : MonoBehaviour
     }
 
     public void OnNewDay(){
-        foreach(Transform child in transform){
-            child.GetComponent<Node>().OnNewDay();
+        foreach(Edge e in edges){
+            if (e){
+            e.OnNewDay();
+            }
+        }
+        foreach(Node n in nodes){
+            if (n){
+            n.OnNewDay();
+            }
         }
     }
 }

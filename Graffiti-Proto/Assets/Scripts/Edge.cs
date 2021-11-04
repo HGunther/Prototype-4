@@ -11,7 +11,7 @@ public class Edge : MonoBehaviour
     {
         // Move between all nodes
         Vector3 midPoint = Vector3.zero;
-        foreach(Node node in nodes)
+        foreach (Node node in nodes)
         {
             midPoint += node.transform.position;
         }
@@ -36,6 +36,24 @@ public class Edge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void OnNewDay()
+    {
+        bool eitherContageious = false;
+        foreach (Node n in nodes)
+        {
+            eitherContageious = eitherContageious || n.is_contagous;
+        }
+
+        if (eitherContageious)
+        {
+            foreach (Node n in nodes)
+            {
+                n.exposed = true;
+                n.days_since_exposure = Mathf.Max(n.days_since_exposure, 1);
+            }
+        }
     }
 }

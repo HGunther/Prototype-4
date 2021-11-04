@@ -45,9 +45,4 @@ public class GameManager : MonoBehaviour
         confirmNamesPanel.SetActive(false);
         confirmButton.GetComponent<Button>().interactable = true;
     }
-
-    public void ConfirmNames()
-    {
-
-    }
 }

@@ -22,10 +22,14 @@ public class NodeManager : MonoBehaviour
 
     public void OnNewDay(){
         foreach(Edge e in edges){
+            if (e){
             e.OnNewDay();
+            }
         }
         foreach(Node n in nodes){
+            if (n){
             n.OnNewDay();
+            }
         }
     }
 }

@@ -12670,6 +12670,8 @@ MonoBehaviour:
   - {fileID: 546194555}
   - {fileID: 1892787433}
   confirmNamePanel: {fileID: 408844660}
+  confirmButton: {fileID: 54560269}
+  endDayButton: {fileID: 569423222}
 --- !u!1 &1685212738
 GameObject:
   m_ObjectHideFlags: 0

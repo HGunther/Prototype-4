@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
 
     public NodeManager nodeManager;
+    int numberOfDays = 1;
     [SerializeField] GameObject day1Panel;
     [SerializeField] GameObject confirmButton;
     [SerializeField] GameObject confirmNamesPanel;
+    [SerializeField] TextMeshProUGUI dayCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -44,5 +47,11 @@ public class GameManager : MonoBehaviour
     {
         confirmNamesPanel.SetActive(false);
         confirmButton.GetComponent<Button>().interactable = true;
+    }
+
+    public void UpdateDayCounter()
+    {
+        numberOfDays++;
+        dayCounter.text = "DAY: " + numberOfDays;
     }
 }

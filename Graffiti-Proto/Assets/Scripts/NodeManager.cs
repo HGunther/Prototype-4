@@ -29,6 +29,7 @@ public class NodeManager : MonoBehaviour
                 var gameObject = hit.transform.gameObject;
                 if (gameObject.tag == "Background")
                 {
+                    print("HitBG");
                     background = true;
                 }
                 else

@@ -22003,9 +22003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcff740a6434574fa3abff377bfb1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asymptomatic: {fileID: 0}
-  symptomatic: {fileID: 0}
-  testedPositive: {fileID: 0}
+  asymptomatic: {fileID: 21300000, guid: b2931004e2159084f84719e6ef7fdeb7, type: 3}
+  symptomatic: {fileID: 21300000, guid: 964a658cac61a7a41944c61cb64fd6df, type: 3}
+  testedPositive: {fileID: 21300000, guid: 8bd8f59bc4820cd4182f084c1a5f217f, type: 3}
 --- !u!1 &1709557213
 GameObject:
   m_ObjectHideFlags: 0

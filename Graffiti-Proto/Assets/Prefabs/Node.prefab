@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4a9b9638676ad8c4f980b12abbef67ef, type: 3}
-  m_Color: {r: 0.025631888, g: 0.6037736, b: 0.033354357, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   is_contagous: 0
   is_symptomatic: 0
   would_test_positive: 0
+  isSelected: 0
 --- !u!58 &6281932628166298784
 CircleCollider2D:
   m_ObjectHideFlags: 0

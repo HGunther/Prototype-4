@@ -85,15 +85,15 @@ public class Node : MonoBehaviour
             is_exposed_firstTime = false;
         }
     }
-    void UpdateRender()
+    public void UpdateRender()
     {
         if (isSelected)
         {
-            transform.localScale = Vector3.one * 0.24f;
+            transform.localScale = Vector3.one * 0.002090968f;
         }
         else
         {
-            transform.localScale = Vector3.one * 0.12f;
+            transform.localScale = Vector2.one * 0.001238065f;
         }
 
 

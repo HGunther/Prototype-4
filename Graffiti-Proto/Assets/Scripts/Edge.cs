@@ -50,6 +50,7 @@ void Start()
 
     private void OnMouseDown()
     {
+        print("true");
         if(isConnected)
         {
             isConnected = false;

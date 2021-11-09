@@ -20,7 +20,7 @@ public class NodeManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            var mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            // var mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             var hits = Physics2D.GetRayIntersectionAll(ray);
             bool background = false;
             bool foundNode = false;

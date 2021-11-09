@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TestButton : MonoBehaviour
 {
     public NodeManager nodeManager;
+    public GameManager gameManager;
     bool interactable = true;
 
     // Update is called once per frame
@@ -31,5 +32,15 @@ public class TestButton : MonoBehaviour
     {
         GetComponent<Button>().interactable = false;
         interactable = false;
+    }
+
+    public void OnTestClicked()
+    {
+        if (nodeManager.selectedNode == null) { return; }
+        var newTestData = new TestResult();
+        newTestData.testDate = gameManager.day;
+        newTestData.testResult = nodeManager.selectedNode.would_test_positive;
+
+        nodeManager.selectedNode.testResults.Add(newTestData);
     }
 }

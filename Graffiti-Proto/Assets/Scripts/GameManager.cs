@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
     public NodeManager nodeManager;
+    public int day = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void NewDay(){
-        Debug.Log("Starting new day");        
+        Debug.Log("Starting new day");
+        day += 1;
         nodeManager.OnNewDay();
     }
 }

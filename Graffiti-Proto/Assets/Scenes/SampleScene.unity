@@ -595,6 +595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeManager: {fileID: 357477447}
+  gameManager: {fileID: 1706911738}
 --- !u!114 &284950937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,8 +639,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1706911738}
-        m_MethodName: NewDay
+      - m_Target: {fileID: 284950936}
+        m_MethodName: OnTestClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6113,6 +6114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeManager: {fileID: 357477447}
+  day: 0
 --- !u!4 &1706911739
 Transform:
   m_ObjectHideFlags: 0

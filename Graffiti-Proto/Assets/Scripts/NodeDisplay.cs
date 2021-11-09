@@ -54,6 +54,44 @@ public class NodeDisplay : MonoBehaviour
     void DisplayNode()
     {
         Enable();
-
+        var children = gameObject.GetComponentsInChildren<Text>();
+        foreach (var text in children)
+        {
+            if (text.gameObject.name == "Name")
+            {
+                text.text = nodeManager.selectedNode.gameObject.name;
+            } else if (text.gameObject.name == "Date")
+            {
+                var size = nodeManager.selectedNode.testResults.Count;
+                if (size == 0)
+                {
+                    text.text = "None";
+                }
+                else
+                {
+                    text.text = "Day " + nodeManager.selectedNode.testResults[size - 1].testDate.ToString();
+                }
+            }
+            else if (text.gameObject.name == "Result")
+            {
+                var size = nodeManager.selectedNode.testResults.Count;
+                if (size == 0)
+                {
+                    text.text = "";
+                }
+                else
+                {
+                    var result = nodeManager.selectedNode.testResults[size - 1].testResult;
+                    if (result)
+                    {
+                        text.text = "Positive";
+                    }
+                    else
+                    {
+                        text.text = "Negative";
+                    }
+                }
+            }
+        }
     }
 }

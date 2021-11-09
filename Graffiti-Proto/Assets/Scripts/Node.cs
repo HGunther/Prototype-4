@@ -12,6 +12,8 @@ public class Node : MonoBehaviour
     public bool is_symptomatic = false;
     public bool would_test_positive = false;
 
+    public bool isSelected = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,6 +82,11 @@ public class Node : MonoBehaviour
 
     void UpdateRender()
     {
+        if (isSelected)
+        {
+            GetComponent<SpriteRenderer>().color = Colors.selected;
+            return;
+        }
         if (is_symptomatic)
         {
             GetComponent<SpriteRenderer>().color = Colors.symptomatic;
@@ -88,5 +95,15 @@ public class Node : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Colors.asymptomatic;
         }
+    }
+
+    public void OnSelected()
+    {
+        UpdateRender();
+    }
+
+    public void OnUnselected()
+    {
+        UpdateRender();
     }
 }

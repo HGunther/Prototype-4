@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2070950655
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4a9b9638676ad8c4f980b12abbef67ef, type: 3}
   m_Color: {r: 0.025631888, g: 0.6037736, b: 0.033354357, a: 1}
@@ -95,11 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2feb8701ae9ab6146bb5a2edda2ff4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  edges: []
   exposed: 0
   days_since_exposure: 0
   is_contagous: 0
   is_symptomatic: 0
   would_test_positive: 0
+  isSelected: 0
 --- !u!58 &6281932628166298784
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -110,7 +112,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

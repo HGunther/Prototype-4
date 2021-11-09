@@ -18,7 +18,17 @@ public class NodeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(EventSystem.current.IsPointerOverGameObject())
+        //forTouch
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
+            {
+                return;
+            }
+        }
+
+        //forMouse
+        if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }

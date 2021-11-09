@@ -7,8 +7,7 @@ public class NodeManager : MonoBehaviour
     [SerializeField] public List<Node> nodes;
     [SerializeField] public List<Edge> edges;
 
-    bool isNodeSelected = false;
-    Node selectedNode;
+    public Node selectedNode;
     
 
     // Start is called before the first frame update
@@ -56,7 +55,7 @@ public class NodeManager : MonoBehaviour
         { return; }
 
         // deselect previous
-        if (isNodeSelected)
+        if (selectedNode != null)
         {
             selectedNode.isSelected = false;
             selectedNode.OnUnselected();
@@ -66,18 +65,16 @@ public class NodeManager : MonoBehaviour
         node.isSelected = true;
         node.OnSelected();
 
-        isNodeSelected = true;
         selectedNode = node;
     }
 
     public void DeselectNode()
     {
-        if (isNodeSelected)
+        if (selectedNode != null)
         {
             selectedNode.isSelected = false;
             selectedNode.OnUnselected();
         }
-        isNodeSelected = false;
         selectedNode = null;
     }
 

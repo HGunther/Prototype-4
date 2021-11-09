@@ -923,6 +923,7 @@ MonoBehaviour:
   - {fileID: 437466629}
   - {fileID: 1243502193}
   - {fileID: 2025992504}
+  selectedNode: {fileID: 0}
 --- !u!4 &357477448
 Transform:
   m_ObjectHideFlags: 0
@@ -6375,6 +6376,7 @@ GameObject:
   - component: {fileID: 2019876510}
   - component: {fileID: 2019876512}
   - component: {fileID: 2019876511}
+  - component: {fileID: 2019876513}
   m_Layer: 5
   m_Name: LeftPannel
   m_TagString: Untagged
@@ -6437,6 +6439,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019876509}
   m_CullTransparentMesh: 0
+--- !u!114 &2019876513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019876509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75587d98c098a8f408bde6c23fd285af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeManager: {fileID: 357477447}
 --- !u!114 &2019986097 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6281932628166298785, guid: d615fc548f00abe44b0b5ce20abe3a64,

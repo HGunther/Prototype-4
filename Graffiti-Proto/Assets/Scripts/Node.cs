@@ -12,6 +12,8 @@ public class Node : MonoBehaviour
     public bool is_symptomatic = false;
     public bool would_test_positive = false;
 
+    public List<TestResult> testResults;
+
     public bool isSelected = false;
 
     // Start is called before the first frame update

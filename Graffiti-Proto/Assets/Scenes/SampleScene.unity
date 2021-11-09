@@ -181,7 +181,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node5
+      value: Cluster3-Node5
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -359,7 +359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -192, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &54560271
@@ -772,7 +772,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node3
+      value: Cluster4-Node3
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -868,7 +868,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node1
+      value: Cluster3-Node1
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -1365,7 +1365,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node4
+      value: Cluster4-Node4
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -3156,7 +3156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d601c57becfec834db54275a6c85efb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detailsButton: {fileID: 0}
   selectedNode: {fileID: 0}
 --- !u!4 &357477448
 Transform:
@@ -5166,7 +5165,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node1
+      value: Cluster1-Node1
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -6541,7 +6540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -192, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &569423224
@@ -7352,7 +7351,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node1
+      value: Cluster2-Node1
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -8328,7 +8327,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node2
+      value: Cluster1-Node2
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -8876,7 +8875,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node5
+      value: Cluster4-Node5
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -10442,7 +10441,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node2
+      value: Cluster3-Node2
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -10538,7 +10537,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node3
+      value: Cluster3-Node3
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -13288,7 +13287,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node1
+      value: Cluster4-Node1
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -14179,7 +14178,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 92b14620a7e0be946a4bc2e1dad29ace, type: 2}
+  - {fileID: 2100000, guid: 6c095043b869fd3458dc001cc9bbc9a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14825,7 +14824,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node5
+      value: Cluster1-Node5
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -15794,7 +15793,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node5
+      value: Cluster2-Node5
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -16141,7 +16140,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node3
+      value: Cluster2-Node3
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -16964,7 +16963,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node2
+      value: Cluster4-Node2
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -17821,9 +17820,9 @@ RectTransform:
   m_Father: {fileID: 2136060211}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 384, y: -0.27608}
   m_SizeDelta: {x: 384, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1451207082
@@ -19220,7 +19219,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node4
+      value: Cluster3-Node4
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -19388,7 +19387,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 92b14620a7e0be946a4bc2e1dad29ace, type: 2}
+  - {fileID: 2100000, guid: 6c095043b869fd3458dc001cc9bbc9a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19803,7 +19802,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node2
+      value: Cluster2-Node2
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -21680,7 +21679,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node4
+      value: Cluster1-Node4
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -21946,7 +21945,6 @@ MonoBehaviour:
   numberOfDays: 1
   day1Panel: {fileID: 464689469}
   confirmButton: {fileID: 54560269}
-  detailsButton: {fileID: 0}
   testButton: {fileID: 1451207080}
   confirmNamesPanel: {fileID: 408844660}
   dayCounter: {fileID: 1228567258}
@@ -22816,7 +22814,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 92b14620a7e0be946a4bc2e1dad29ace, type: 2}
+  - {fileID: 2100000, guid: 6c095043b869fd3458dc001cc9bbc9a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24860,7 +24858,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node4
+      value: Cluster2-Node4
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -26188,7 +26186,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: m_Name
-      value: Node3
+      value: Cluster1-Node3
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -26811,10 +26809,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 84
     m_Alignment: 4
     m_AlignByGeometry: 0

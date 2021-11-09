@@ -50,6 +50,7 @@ void Start()
 
     private void OnMouseDown()
     {
+        print("EdgeTouch");
         if(isConnected)
         {
             isConnected = false;

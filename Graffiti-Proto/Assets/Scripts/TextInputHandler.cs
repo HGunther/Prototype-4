@@ -24,7 +24,10 @@ public class TextInputHandler : MonoBehaviour
         gameManager.NewDay();
         for(int i=0;i<inputFields.Length;i++)
         {
-            nameFields[i].text=inputFields[i].transform.GetChild(0).transform.GetChild(2).GetComponent<TextMeshProUGUI>().text;
+            if (inputFields[i].transform.GetChild(0).transform.GetChild(2).GetComponent<TextMeshProUGUI>().text.Length !=1)
+            {
+                nameFields[i].text = inputFields[i].transform.GetChild(0).transform.GetChild(2).GetComponent<TextMeshProUGUI>().text;
+            }
             inputFields[i].SetActive(false);
         }
     }

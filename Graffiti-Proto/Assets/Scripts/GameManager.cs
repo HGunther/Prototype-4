@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
 
     public NodeManager nodeManager;
-    int numberOfDays = 1;
+    public int numberOfDays = 1;
     [SerializeField] GameObject day1Panel;
 
     [Header("Buttons")]

@@ -11,10 +11,16 @@ public class Node : MonoBehaviour
     public bool would_test_positive = false;
     bool is_exposed_firstTime = false;
 
+    public List<TestResult> testResults;
+    public bool isSelected = false;
+
+    GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-
+        gameManager = FindObjectOfType<GameManager>();
+        testResults = new List<TestResult>();
+        UpdateRender();
     }
 
     // Update is called once per frame
@@ -25,12 +31,7 @@ public class Node : MonoBehaviour
 
     void OnEnable()
     {
-        UpdateRender();
-    }
-
-    private void OnMouseDown()
-    {
-        print("Touched");
+        //UpdateRender();
     }
 
     public void OnNewDay()
@@ -64,6 +65,14 @@ public class Node : MonoBehaviour
         {
             would_test_positive = true;
         }
+        if (days_since_exposure >= Constants.days_until_not_contagous)
+        {
+            is_contagous = false;
+        }
+        if (days_since_exposure >= Constants.days_until_would_not_test_positive)
+        {
+            would_test_positive = false;
+        }
 
         if (days_since_exposure >= Constants.days_until_can_get_again)
         {
@@ -78,13 +87,46 @@ public class Node : MonoBehaviour
     }
     void UpdateRender()
     {
-        if (is_symptomatic)
+        if (isSelected)
         {
-            GetComponent<SpriteRenderer>().color = Colors.symptomatic;
+            transform.localScale = Vector3.one * 0.24f;
         }
         else
         {
-            GetComponent<SpriteRenderer>().color = Colors.asymptomatic;
+            transform.localScale = Vector3.one * 0.12f;
         }
+
+
+        bool testedPositiveRecently = false;
+        if (testResults.Count != 0)
+        {
+            if (testResults[testResults.Count - 1].testResult)
+            {
+                if (gameManager.numberOfDays - testResults[testResults.Count - 1].testDate < Constants.days_to_show_sick_after_test) { testedPositiveRecently = true; }
+            }
+        }
+
+        if (testedPositiveRecently)
+        {
+            GetComponent<SpriteRenderer>().sprite = gameManager.GetComponent<Sprites>().testedPositive;
+        }
+        else if (is_symptomatic)
+        {
+            GetComponent<SpriteRenderer>().sprite = gameManager.GetComponent<Sprites>().symptomatic;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = gameManager.GetComponent<Sprites>().asymptomatic;
+        }
+    }
+
+    public void OnSelected()
+    {
+        UpdateRender();
+    }
+
+    public void OnUnselected()
+    {
+        UpdateRender();
     }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class NodeManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject[] nodes;
     void Start()
     {
-        
+        nodes = GameObject.FindGameObjectsWithTag("Node");
     }
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class NodeManager : MonoBehaviour
     }
 
     public void OnNewDay(){
-        foreach(Transform child in transform){
+        foreach(GameObject child in nodes){
             child.GetComponent<Node>().OnNewDay();
         }
     }

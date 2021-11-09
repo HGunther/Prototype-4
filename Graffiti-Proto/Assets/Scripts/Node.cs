@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
-    [SerializeField] public List<Edge> edges;
+    public int id;
+    public List<Edge> edges;
+    public List<Node> connectedNodes;
 
     public bool exposed = false;
-    public int days_since_exposure = 0;
-    public bool is_contagous = false;
-    public bool is_symptomatic = false;
-    public bool would_test_positive = false;
+    public int daysSinceExposure = 0;
+    public bool isContagious = false;
+    public bool isSymptomatic = false;
+    public bool wouldTestPositive = false;
+    public bool canGetCovid = true;
 
     // Start is called before the first frame update
     void Start()
@@ -34,53 +37,63 @@ public class Node : MonoBehaviour
         print("Touched");
     }
 
-    public void OnNewDay()
+    public void NewDay()
     {
         if (exposed)
         {
-            days_since_exposure += 1;
+            canGetCovid = false;
+            daysSinceExposure += 1;
         }
         UpdateData();
+
+        if(isContagious)
+        {
+            foreach(Node node in connectedNodes)
+            {
+                if (!node.exposed)
+                    node.exposed = true;
+            }
+        }
     }
 
     void UpdateData()
     {
-        if (days_since_exposure >= Constants.days_until_contagous)
+        if (daysSinceExposure >= Constants.days_until_contagious)
         {
-            is_contagous = true;
+            isContagious = true;
         }
-        if (days_since_exposure >= Constants.days_until_symptomatic)
+        if (daysSinceExposure >= Constants.days_until_symptomatic)
         {
-            is_symptomatic = true;
+            isSymptomatic = true;
             UpdateRender();
         }
-        if (days_since_exposure >= Constants.days_until_would_test_positive)
+        if (daysSinceExposure >= Constants.days_until_would_test_positive)
         {
-            would_test_positive = true;
+            wouldTestPositive = true;
         }
-        if (days_since_exposure >= Constants.days_until_not_contagous)
+        if (daysSinceExposure >= Constants.days_until_not_contagous)
         {
-            is_contagous = false;
+            isContagious = false;
         }
-        if (days_since_exposure >= Constants.days_until_would_not_test_positive)
+        if (daysSinceExposure >= Constants.days_until_would_not_test_positive)
         {
-            would_test_positive = false;
+            wouldTestPositive = false;
         }
 
-        if (days_since_exposure >= Constants.days_until_can_get_again)
+        if (daysSinceExposure >= Constants.days_until_can_get_again)
         {
             exposed = false;
-            days_since_exposure = 0;
-            is_contagous = false;
-            is_symptomatic = false;
+            daysSinceExposure = 0;
+            isContagious = false;
+            isSymptomatic = false;
             UpdateRender();
-            would_test_positive = false;
+            wouldTestPositive = false;
         }
     }
 
     void UpdateRender()
     {
-        if (is_symptomatic)
+        if (isSymptomatic)
         {
             GetComponent<SpriteRenderer>().color = Colors.symptomatic;
         }

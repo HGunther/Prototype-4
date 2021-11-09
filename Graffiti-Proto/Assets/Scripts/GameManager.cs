@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
-    public NodeManager nodeManager;
+    public GameState GS;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        GS.CreateEdges();
     }
 
     // Update is called once per frame
@@ -19,8 +18,12 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void NewDay(){
-        Debug.Log("Starting new day");        
-        nodeManager.OnNewDay();
+    public void NewDay()
+    {
+        Debug.Log("Starting new day");
+        foreach(Node node in GS.nodes.Values)
+        {
+            node.NewDay();
+        }
     }
 }

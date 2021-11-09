@@ -9,15 +9,13 @@ public class Edge : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Move between all nodes
-        Vector3 midPoint = Vector3.zero;
-        foreach (Node node in nodes)
-        {
-            midPoint += node.transform.position;
-        }
-        float scale = 1.0f / nodes.Count;
-        midPoint = midPoint * scale;
 
+    }
+
+    public void SetupEdge()
+    {
+        // Move between all nodes
+        Vector3 midPoint = (nodes[0].transform.position + nodes[1].transform.position) / 2;
         transform.position = midPoint;
 
         // Rotate to correct angle
@@ -31,29 +29,5 @@ public class Edge : MonoBehaviour
         var node_size = nodes[0].transform.localScale.x;
         temp.x = distance * 0.1f - node_size;
         transform.localScale = temp;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void OnNewDay()
-    {
-        bool eitherContageious = false;
-        foreach (Node n in nodes)
-        {
-            eitherContageious = eitherContageious || n.is_contagous;
-        }
-
-        if (eitherContageious)
-        {
-            foreach (Node n in nodes)
-            {
-                n.exposed = true;
-                n.days_since_exposure = Mathf.Max(n.days_since_exposure, 1);
-            }
-        }
     }
 }

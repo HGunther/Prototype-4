@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         for(int i=0;i<clusters.Length;i++)
         {
             nodeIndex = Random.Range(0, 5);
-            clusters[i].transform.GetChild(0).transform.GetChild(nodeIndex).GetComponent<Node>().exposed = true;
+            clusters[i].transform.GetChild(0).transform.GetChild(3).GetComponent<Node>().exposed = true;
         }
     }
 

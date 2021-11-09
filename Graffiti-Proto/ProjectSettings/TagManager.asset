@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Connection
   - Node
+  - Edge
   layers:
   - Default
   - TransparentFX

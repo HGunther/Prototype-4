@@ -13,11 +13,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject confirmButton;
     [SerializeField] GameObject confirmNamesPanel;
     [SerializeField] TextMeshProUGUI dayCounter;
+    [SerializeField] GameObject[] clusters;
 
     // Start is called before the first frame update
     void Start()
     {
+        int nodeIndex;
         
+        for(int i=0;i<clusters.Length;i++)
+        {
+            nodeIndex = Random.Range(0, 5);
+            clusters[i].transform.GetChild(0).transform.GetChild(nodeIndex).GetComponent<Node>().exposed = true;
+        }
     }
 
     // Update is called once per frame

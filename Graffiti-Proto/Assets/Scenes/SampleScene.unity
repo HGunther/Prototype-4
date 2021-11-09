@@ -5083,7 +5083,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298785, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: exposed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -8139,7 +8139,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298785, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: exposed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -14444,7 +14444,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298785, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: exposed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -20889,7 +20889,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298785, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: exposed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
@@ -21144,6 +21144,11 @@ MonoBehaviour:
   confirmButton: {fileID: 54560269}
   confirmNamesPanel: {fileID: 408844660}
   dayCounter: {fileID: 1228567258}
+  clusters:
+  - {fileID: 1280295287}
+  - {fileID: 967160870}
+  - {fileID: 201714265}
+  - {fileID: 536913880}
 --- !u!4 &1706911739
 Transform:
   m_ObjectHideFlags: 0
@@ -25118,7 +25123,7 @@ PrefabInstance:
     - target: {fileID: 6281932628166298785, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}
       propertyPath: exposed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6281932628166298796, guid: d615fc548f00abe44b0b5ce20abe3a64,
         type: 3}

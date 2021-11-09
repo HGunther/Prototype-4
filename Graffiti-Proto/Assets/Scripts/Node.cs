@@ -16,10 +16,12 @@ public class Node : MonoBehaviour
 
     public bool isSelected = false;
 
+    public GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        testResults = new List<TestResult>();
+        
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class Node : MonoBehaviour
 
     void OnEnable()
     {
+        testResults = new List<TestResult>();
         UpdateRender();
     }
 
@@ -82,20 +85,37 @@ public class Node : MonoBehaviour
         }
     }
 
-    void UpdateRender()
+    public void UpdateRender()
     {
+        // make the selected one larger
         if (isSelected)
         {
-            GetComponent<SpriteRenderer>().color = Colors.selected;
-            return;
-        }
-        if (is_symptomatic)
-        {
-            GetComponent<SpriteRenderer>().color = Colors.symptomatic;
+            transform.localScale = Vector3.one * 0.24f;
         }
         else
         {
-            GetComponent<SpriteRenderer>().color = Colors.asymptomatic;
+            transform.localScale = Vector3.one * 0.12f;
+        }
+
+        bool testedPositiveRecently = false;
+        if (testResults.Count != 0) {
+            if (testResults[testResults.Count - 1].testResult)
+            {
+                if (gameManager.day - testResults[testResults.Count-1].testDate < Constants.days_to_show_sick_after_test) { testedPositiveRecently = true; }
+            }
+        }
+
+        if (testedPositiveRecently)
+        {
+            GetComponent<SpriteRenderer>().sprite = gameManager.GetComponent<Sprites>().testedPositive;
+        }
+        else if (is_symptomatic)
+        {
+            GetComponent<SpriteRenderer>().sprite = gameManager.GetComponent<Sprites>().symptomatic;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = gameManager.GetComponent<Sprites>().asymptomatic;
         }
     }
 

@@ -44,3 +44,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2519594717
+    locked: 0
+  - name: 'Game: Edges'
+    uniqueID: 2547428841
+    locked: 0
+  - name: 'Game: Nodes'
+    uniqueID: 3167463973
+    locked: 0

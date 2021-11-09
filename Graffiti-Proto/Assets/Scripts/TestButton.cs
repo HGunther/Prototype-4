@@ -42,5 +42,6 @@ public class TestButton : MonoBehaviour
         newTestData.testResult = nodeManager.selectedNode.would_test_positive;
 
         nodeManager.selectedNode.testResults.Add(newTestData);
+        nodeManager.selectedNode.UpdateRender();
     }
 }

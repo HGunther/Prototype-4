@@ -30,7 +30,9 @@ public class Edge : MonoBehaviour
         var temp = transform.localScale;
         var node_size = nodes[0].transform.localScale.x;
         temp.x = distance * 0.1f - node_size;
+        temp.y = 0.65f;
         transform.localScale = temp;
+
     }
 
     // Update is called once per frame

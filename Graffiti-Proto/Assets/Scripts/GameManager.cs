@@ -18,13 +18,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int nodeIndex;
-        
-        for(int i=0;i<clusters.Length;i++)
-        {
-            nodeIndex = Random.Range(0, 5);
-            clusters[i].transform.GetChild(0).transform.GetChild(nodeIndex).GetComponent<Node>().exposed = true;
-        }
+        int clusterIndex = Random.Range(0, 4);
+        int nodeIndex = Random.Range(0, 5);
+        clusters[0].transform.GetChild(0).transform.GetChild(nodeIndex).GetComponent<Node>().exposed = true;
     }
 
     // Update is called once per frame

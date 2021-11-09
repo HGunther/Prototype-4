@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
         int clusterIndex = Random.Range(0, 4);
         int nodeIndex = Random.Range(0, 5);
         clusters[0].transform.GetChild(0).transform.GetChild(nodeIndex).GetComponent<Node>().exposed = true;
+        clusters[0].transform.GetChild(0).transform.GetChild(nodeIndex).GetComponent<Node>().OnNewDay();
     }
 
     // Update is called once per frame

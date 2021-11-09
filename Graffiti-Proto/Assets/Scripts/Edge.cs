@@ -38,8 +38,12 @@ void Start()
         {
             foreach (GameObject n in currentNodes)
             {
-                n.GetComponent<Node>().exposed = true;
-                n.GetComponent<Node>().days_since_exposure = Mathf.Max(n.GetComponent<Node>().days_since_exposure, 1);
+                if(n.GetComponent<Node>().exposed == false)
+                {
+                    n.GetComponent<Node>().exposed = true;
+                    n.GetComponent<Node>().OnNewDay();
+                }
+                //n.GetComponent<Node>().days_since_exposure = Mathf.Max(n.GetComponent<Node>().days_since_exposure, 1);
             }
         }
     }

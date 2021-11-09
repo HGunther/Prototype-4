@@ -19,13 +19,19 @@ public class NodeManager : MonoBehaviour
     }
 
     public void OnNewDay(){
-        foreach(GameObject child in nodes){
+
+        foreach (GameObject child in nodes)
+        {
             child.GetComponent<Node>().OnNewDay();
         }
 
-        foreach(GameObject child in edges)
+        foreach (GameObject child in edges)
         {
             child.GetComponent<Edge>().OnNewDay();
         }
+
+       
+
+     
     }
 }

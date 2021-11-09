@@ -9,6 +9,7 @@ public class Node : MonoBehaviour
     public bool is_contagous = false;
     public bool is_symptomatic = false;
     public bool would_test_positive = false;
+    bool is_exposed_firstTime = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,14 @@ public class Node : MonoBehaviour
     {
         if (exposed)
         {
-            days_since_exposure += 1;
+            if(!is_exposed_firstTime)
+            {
+                is_exposed_firstTime = true;
+            }
+            else if(is_exposed_firstTime)
+            {
+                days_since_exposure += 1;
+            }
         }
         UpdateData();
     }
@@ -65,6 +73,7 @@ public class Node : MonoBehaviour
             is_symptomatic = false;
             UpdateRender();
             would_test_positive = false;
+            is_exposed_firstTime = false;
         }
     }
     void UpdateRender()

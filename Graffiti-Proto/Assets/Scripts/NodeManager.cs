@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class NodeManager : MonoBehaviour
 {
     GameObject[] nodes;
     GameObject[] edges;
+    [SerializeField] DetailsButton detailsButton;
 
     public Node selectedNode;
     void Start()
@@ -17,6 +19,10 @@ public class NodeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -70,6 +76,7 @@ public class NodeManager : MonoBehaviour
 
     public void DeselectNode()
     {
+        detailsButton.CloseDetailsPanel();
         if (selectedNode != null)
         {
             selectedNode.isSelected = false;

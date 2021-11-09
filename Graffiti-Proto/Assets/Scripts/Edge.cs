@@ -5,15 +5,19 @@ using UnityEngine;
 public class Edge : MonoBehaviour
 {
     [SerializeField] List<GameObject> Nodes;
+    List<GameObject> currentNodes;
     bool isConnected = true;
-    Gradient gradient = new Gradient();
+    Gradient translucent = new Gradient();
+    Gradient opaque = new Gradient();
 
 void Start()
     {
-       // gradient.SetKeys(
-       //    new GradientColorKey[] { new GradientColorKey(Color.green, 0.0f), new GradientColorKey(Color.red, 1.0f) },
-       //    new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
-       //);
+        currentNodes = Nodes;
+        translucent.SetKeys(new GradientColorKey[] { new GradientColorKey(Color.white, 0.0f), new GradientColorKey(Color.white, 1.0f)},
+                            new GradientAlphaKey[] { new GradientAlphaKey(0.3f, 0.0f), new GradientAlphaKey(0.3f, 1.0f) });
+
+        opaque.SetKeys(new GradientColorKey[] { new GradientColorKey(Color.white, 0.0f), new GradientColorKey(Color.white, 1.0f) },
+                            new GradientAlphaKey[] { new GradientAlphaKey(1f, 0.0f), new GradientAlphaKey(1f, 1.0f) });
     }
 
     // Update is called once per frame
@@ -32,7 +36,7 @@ void Start()
 
         if (eitherContageious)
         {
-            foreach (GameObject n in Nodes)
+            foreach (GameObject n in currentNodes)
             {
                 n.GetComponent<Node>().exposed = true;
                 n.GetComponent<Node>().days_since_exposure = Mathf.Max(n.GetComponent<Node>().days_since_exposure, 1);
@@ -45,12 +49,14 @@ void Start()
         if(isConnected)
         {
             isConnected = false;
-            //gameObject.GetComponent<TrailRenderer>().colorGradient
+            gameObject.GetComponent<LineRenderer>().colorGradient = translucent;
+            currentNodes = new List<GameObject>();
         }
         else if(!isConnected)
         {
             isConnected = true;
-            //makeopaque
+            gameObject.GetComponent<LineRenderer>().colorGradient = opaque;
+            currentNodes = Nodes;
         }
     }
 }

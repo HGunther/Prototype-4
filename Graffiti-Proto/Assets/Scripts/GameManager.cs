@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
 
     [Header("Buttons")]
     [SerializeField] GameObject confirmButton;
-    [SerializeField] GameObject detailsButton;
     [SerializeField] GameObject testButton;
 
     [SerializeField] GameObject confirmNamesPanel;
@@ -44,7 +43,6 @@ public class GameManager : MonoBehaviour
     {
         day1Panel.SetActive(false);
         confirmButton.SetActive(true);
-        detailsButton.SetActive(true);
         testButton.SetActive(true);
     }
 

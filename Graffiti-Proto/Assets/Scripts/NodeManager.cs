@@ -7,7 +7,6 @@ public class NodeManager : MonoBehaviour
 {
     GameObject[] nodes;
     GameObject[] edges;
-    [SerializeField] DetailsButton detailsButton;
 
     public Node selectedNode;
     void Start()
@@ -76,7 +75,6 @@ public class NodeManager : MonoBehaviour
 
     public void DeselectNode()
     {
-        detailsButton.CloseDetailsPanel();
         if (selectedNode != null)
         {
             selectedNode.isSelected = false;

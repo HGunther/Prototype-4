@@ -10,7 +10,12 @@ public class GameManager : MonoBehaviour
     public NodeManager nodeManager;
     int numberOfDays = 1;
     [SerializeField] GameObject day1Panel;
+
+    [Header("Buttons")]
     [SerializeField] GameObject confirmButton;
+    [SerializeField] GameObject detailsButton;
+    [SerializeField] GameObject testButton;
+
     [SerializeField] GameObject confirmNamesPanel;
     [SerializeField] TextMeshProUGUI dayCounter;
     [SerializeField] GameObject[] clusters;
@@ -39,6 +44,8 @@ public class GameManager : MonoBehaviour
     {
         day1Panel.SetActive(false);
         confirmButton.SetActive(true);
+        detailsButton.SetActive(true);
+        testButton.SetActive(true);
     }
 
     public void DoneEditingEvent()

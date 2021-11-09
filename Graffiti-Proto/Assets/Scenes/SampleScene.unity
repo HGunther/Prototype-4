@@ -10959,6 +10959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 888054759}
   - component: {fileID: 888054758}
+  - component: {fileID: 888054760}
   m_Layer: 0
   m_Name: Background
   m_TagString: Background
@@ -11030,6 +11031,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &888054760
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888054757}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 15, y: 15}
+    newSize: {x: 14.51, y: 7.14}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 15, y: 15}
+  m_EdgeRadius: 0
 --- !u!1 &890391764
 GameObject:
   m_ObjectHideFlags: 0
@@ -17847,6 +17874,7 @@ GameObject:
   - component: {fileID: 1451207084}
   - component: {fileID: 1451207083}
   - component: {fileID: 1451207082}
+  - component: {fileID: 1451207085}
   m_Layer: 5
   m_Name: TestNodeButton
   m_TagString: Untagged
@@ -17917,8 +17945,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1706911738}
-        m_MethodName: DoneEditingEvent
+      - m_Target: {fileID: 1451207085}
+        m_MethodName: OnTestClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17964,6 +17992,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451207080}
   m_CullTransparentMesh: 0
+--- !u!114 &1451207085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451207080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4593f5dff62194392a98403fbb17a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeManager: {fileID: 357477447}
+  gameManager: {fileID: 1706911738}
 --- !u!1 &1455902904
 GameObject:
   m_ObjectHideFlags: 0

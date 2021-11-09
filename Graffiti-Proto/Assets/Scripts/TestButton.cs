@@ -36,6 +36,7 @@ public class TestButton : MonoBehaviour
 
     public void OnTestClicked()
     {
+        print("clickedTest");
         if (nodeManager.selectedNode == null) { return; }
         var newTestData = new TestResult();
         newTestData.testDate = gameManager.numberOfDays;

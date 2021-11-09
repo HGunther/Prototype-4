@@ -4,21 +4,40 @@ using UnityEngine;
 
 public class Edge : MonoBehaviour
 {
-    [SerializeField] List<GameObject> Nodes;
+    [SerializeField] List<GameObject> nodes;
     List<GameObject> currentNodes;
     bool isConnected = true;
     Gradient translucent = new Gradient();
     Gradient opaque = new Gradient();
 
-void Start()
+    void Start()
     {
-        currentNodes = Nodes;
+        currentNodes = nodes;
         translucent.SetKeys(new GradientColorKey[] { new GradientColorKey(Color.white, 0.0f), new GradientColorKey(Color.white, 1.0f)},
                             new GradientAlphaKey[] { new GradientAlphaKey(0.3f, 0.0f), new GradientAlphaKey(0.3f, 1.0f) });
 
         opaque.SetKeys(new GradientColorKey[] { new GradientColorKey(Color.white, 0.0f), new GradientColorKey(Color.white, 1.0f) },
                             new GradientAlphaKey[] { new GradientAlphaKey(1f, 0.0f), new GradientAlphaKey(1f, 1.0f) });
     }
+
+    //void SetupEdge()
+    //{
+    //    Vector3 midPoint = (nodes[0].transform.position + nodes[1].transform.position) / 2;
+
+    //    transform.position = midPoint;
+
+    //    // Rotate to correct angle
+    //    Vector3 dif = nodes[1].transform.position - nodes[0].transform.position;
+    //    float angle_degrees = Vector3.SignedAngle(dif, Vector3.right, Vector3.back);
+    //    transform.Rotate(new Vector3(0, 0, angle_degrees));
+
+    //    // Scale to match distance
+    //    float distance = Vector3.Distance(nodes[0].transform.position, nodes[1].transform.position);
+    //    var temp = transform.localScale;
+    //    var node_size = nodes[0].transform.lossyScale.x;
+    //    temp.x = distance * 0.1f - node_size;
+    //    transform.localScale = temp;
+    //}
 
     // Update is called once per frame
     void Update()
@@ -29,7 +48,7 @@ void Start()
     public void OnNewDay()
     {
         bool eitherContageious = false;
-        foreach (GameObject n in Nodes)
+        foreach (GameObject n in nodes)
         {
             eitherContageious = eitherContageious || n.GetComponent<Node>().is_contagous;
         }
@@ -60,7 +79,7 @@ void Start()
         {
             isConnected = true;
             gameObject.GetComponent<LineRenderer>().colorGradient = opaque;
-            currentNodes = Nodes;
+            currentNodes = nodes;
         }
     }
 }

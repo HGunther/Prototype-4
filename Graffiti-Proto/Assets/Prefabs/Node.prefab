@@ -72,10 +72,10 @@ SpriteRenderer:
   m_SortingLayerID: 2070950655
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a9b9638676ad8c4f980b12abbef67ef, type: 3}
-  m_Color: {r: 0.025631888, g: 0.6037736, b: 0.033354357, a: 1}
+  m_Sprite: {fileID: 21300000, guid: c941d0b944a804647aef43b18842d52b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2feb8701ae9ab6146bb5a2edda2ff4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noSymptomsFace: {fileID: 21300000, guid: c941d0b944a804647aef43b18842d52b, type: 3}
+  hasSymptomsFace: {fileID: 21300000, guid: 7b7ed1dbf6cb04b4ba6be992799c4ac5, type: 3}
   exposed: 0
   days_since_exposure: 0
   is_contagous: 0

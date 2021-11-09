@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
+    public Sprite noSymptomsFace, hasSymptomsFace;
+
     public bool exposed = false;
     public int days_since_exposure = 0;
     public bool is_contagous = false;
@@ -51,21 +53,21 @@ public class Node : MonoBehaviour
 
     void UpdateData()
     {
-        if (days_since_exposure >= Constants.days_until_contagous)
+        if (days_since_exposure > Constants.days_until_contagous)
         {
             is_contagous = true;
         }
-        if (days_since_exposure >= Constants.days_until_symptomatic)
+        if (days_since_exposure > Constants.days_until_symptomatic)
         {
             is_symptomatic = true;
             UpdateRender();
         }
-        if (days_since_exposure >= Constants.days_until_would_test_positive)
+        if (days_since_exposure > Constants.days_until_would_test_positive)
         {
             would_test_positive = true;
         }
 
-        if (days_since_exposure >= Constants.days_until_can_get_again)
+        if (days_since_exposure > Constants.days_until_can_get_again)
         {
             exposed = false;
             days_since_exposure = 0;
@@ -80,11 +82,13 @@ public class Node : MonoBehaviour
     {
         if (is_symptomatic)
         {
-            GetComponent<SpriteRenderer>().color = Colors.symptomatic;
+            //GetComponent<SpriteRenderer>().color = Colors.symptomatic;
+            GetComponent<SpriteRenderer>().sprite = hasSymptomsFace;
         }
         else
         {
-            GetComponent<SpriteRenderer>().color = Colors.asymptomatic;
+            //GetComponent<SpriteRenderer>().color = Colors.asymptomatic;
+            GetComponent<SpriteRenderer>().sprite = noSymptomsFace;
         }
     }
 }

@@ -21,7 +21,8 @@ public class Node : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        testResults = new List<TestResult>();
+        UpdateRender();
     }
 
     // Update is called once per frame
@@ -32,8 +33,7 @@ public class Node : MonoBehaviour
 
     void OnEnable()
     {
-        testResults = new List<TestResult>();
-        UpdateRender();
+        
     }
 
     private void OnMouseDown()
